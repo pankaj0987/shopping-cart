@@ -31,3 +31,31 @@ body {
     text-wrap: balance;
   }
 }
+
+.flying-img {
+  position: absolute;
+  width: 204px;
+  height: 240px;
+  animation: fly_to_cart 1s ease-in-out;
+}
+
+@keyframes fly_to_cart {
+  0% {
+      left: 0;
+      bottom: 0;
+  }
+  45%, 50% {
+      left: calc(var(--left) + 30px);
+      bottom: 80px;
+  }
+  80%, 90% {
+      left: calc(var(--left) + 30px);
+      bottom: var(--top);
+      transform: scale(.1);
+  }
+  100% {
+      left: calc(var(--left) + 30px);
+      bottom: var(--top);
+      transform: scale(.1);
+  }
+}
